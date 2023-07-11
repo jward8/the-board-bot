@@ -5,6 +5,8 @@ const getLocalCommands = require('../../utils/getLocalCommands');
 module.exports = async (client, interaction) => {
     if (!interaction.isChatInputCommand()) return;
 
+    console.log("HERE");
+
     const localCommands = getLocalCommands();
 
     try {
