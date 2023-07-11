@@ -34,6 +34,9 @@ module.exports = {
 
         const role = await interaction.member.guild.roles.cache.find(role => role.name === "The Crown");
         
+        console.log(members);
+        console.log("IT/'S actually here ")
+
         const oldKing = members.find(member => member.nickname.includes("👑"));
         if (oldKing) {
             oldKing.setNickname(oldKing.nickname.split("👑")[0].trim());
