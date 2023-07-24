@@ -33,8 +33,8 @@ module.exports = {
         }
 
         const role = await interaction.member.guild.roles.cache.find(role => role.name === "The Crown");
-        
-        const oldKing = members.find(member => member.nickname.includes("👑"));
+
+        const oldKing = members.find(member => member.nickname?.includes("👑"));
         if (oldKing) {
             oldKing.setNickname(oldKing.nickname.split("👑")[0].trim());
         } else if (guild.ownerId !== targetUser.id) {
